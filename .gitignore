@@ -1,0 +1,20 @@
+# Email digests ¡ª keep local only
+*.email.md
+
+# Local automation config and scripts ¡ª not for public repo
+config/
+prompts/
+scripts/
+
+# Docs (editorial playbook, local use only)
+docs/
+
+# Logs
+logs/
+
+# Codex internal directories
+.agents/
+.codex/
+
+# Temporary files
+tmp_*
