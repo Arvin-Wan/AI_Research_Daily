@@ -1,8 +1,8 @@
-# AI Research Daily
+ï»¿# AI Research Daily
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
-A curated daily digest of AI research ¡ª papers that actually matter, stripped of hype.
+A curated daily digest of AI research --- papers that actually matter, stripped of hype.
 Weekly roundups covering strategic moves from the major AI labs.
 
 Every report is sourced, scored against a published rubric, and written to be useful
@@ -22,8 +22,8 @@ covering method, experiments, and results. Borderline cases go into a watchlist.
 
 ## Editorial standards
 
-- **No fabrication.** Every factual claim ¡ª paper titles, benchmarks, experimental
-  results, company announcements ¡ª must be traceable to a primary source linked in
+- **No fabrication.** Every factual claim --- paper titles, benchmarks, experimental
+  results, company announcements --- must be traceable to a primary source linked in
   the report. Nothing is invented or embellished.
 - **No distortion.** Conclusions reported must faithfully reflect what the original
   source demonstrates. Exaggerated or oversimplified claims are excluded.
@@ -37,15 +37,15 @@ covering method, experiments, and results. Borderline cases go into a watchlist.
 
 ### Daily reports (`reports/daily/YYYY-MM-DD.md`)
 
-- **Top takeaways** ¡ª the 4-6 most important developments of the day
-- **Selected research papers** ¡ª papers that passed the filtering rubric, with full
+- **Top takeaways** --- the 4-6 most important developments of the day
+- **Selected research papers** --- papers that passed the filtering rubric, with full
   summaries covering method, experiments, and results
-- **Papers to watch** ¡ª borderline but interesting work
-- **Company updates** ¡ª model launches, research releases, open-source drops, and
+- **Papers to watch** --- borderline but interesting work
+- **Company updates** --- model launches, research releases, open-source drops, and
   strategic moves from DeepSeek, Google DeepMind, Meta, OpenAI, Anthropic, and
   Microsoft
-- **What to keep an eye on** ¡ª forward-looking notes
-- **Sources** ¡ª direct links for every claim
+- **What to keep an eye on** --- forward-looking notes
+- **Sources** --- direct links for every claim
 
 ### Weekly reports (`reports/weekly/YYYY-MM-DD.md`)
 
@@ -55,21 +55,21 @@ Published every Monday, covering the preceding week's major company news.
 
 ```
 AI_Research_Daily/
-©À©¤©¤ README.md
-©À©¤©¤ LICENSE
-©À©¤©¤ .gitignore
-©¸©¤©¤ reports/
-    ©À©¤©¤ daily/
-    ©¦   ©À©¤©¤ README.md
-    ©¦   ©¸©¤©¤ YYYY-MM-DD.md
-    ©¸©¤©¤ weekly/
-        ©À©¤©¤ README.md
-        ©¸©¤©¤ YYYY-MM-DD.md
+--------- README.md
+--------- LICENSE
+--------- .gitignore
+--------- reports/
+    --------- daily/
+    ---   --------- README.md
+    ---   --------- YYYY-MM-DD.md
+    --------- weekly/
+        --------- README.md
+        --------- YYYY-MM-DD.md
 ```
 
 ## License
 
-MIT ¡ª see [LICENSE](LICENSE) for details.
+MIT --- see [LICENSE](LICENSE) for details.
 
 The reports themselves are provided for informational purposes. All paper and
 company citations link to their original sources.
