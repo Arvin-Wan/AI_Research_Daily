@@ -42,7 +42,7 @@ covering method, experiments, and results. Borderline cases go into a watchlist.
   summaries covering method, experiments, and results
 - **Papers to watch**: borderline but interesting work
 - **Company updates**: model launches, research releases, open-source drops, and
-  strategic moves from DeepSeek, Google DeepMind, Meta, OpenAI, Anthropic, and
+  strategic moves from DeepSeek, Google DeepMind, Meta, OpenAI, Anthropic, Microsoft, Zhipu AI, and Alibaba
   Microsoft
 - **What to keep an eye on**: forward-looking notes
 - **Sources** direct links for every claim
