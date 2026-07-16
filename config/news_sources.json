@@ -1,0 +1,96 @@
+ {
+   "_comment": "Multi-tier news source configuration. Tiers: rss (fast, structured), aggregator (medium, search-based), official (slow, JS-rendered risk). The fetcher tries tier 1 first, falls back through tiers on failure.",
+   "global": {
+     "per_source_timeout_seconds": 8,
+     "max_total_time_seconds": 90,
+     "retry_count": 1,
+     "user_agent": "AI-Research-Daily/1.0 (research bot; contact via repo)"
+   },
+   "universal_fallbacks": [
+     {
+       "name": "Google News RSS",
+       "type": "rss",
+       "url_template": "https://news.google.com/rss/search?q={query}&hl=en-US&gl=US&ceid=US:en",
+       "note": "Works for any keyword. Add &when:24h for last 24h if supported."
+     }
+   ],
+   "companies": [
+     {
+       "name": "OpenAI",
+       "keywords": ["OpenAI", "GPT-5", "GPT", "o3", "o4", "Codex"],
+       "sources": [
+         { "type": "rss", "tier": 1, "name": "OpenAI Blog RSS", "url": "https://openai.com/blog/rss.xml" },
+         { "type": "aggregator", "tier": 2, "name": "TechCrunch OpenAI", "url_template": "https://techcrunch.com/?s=OpenAI" },
+         { "type": "aggregator", "tier": 2, "name": "The Verge OpenAI", "url_template": "https://www.theverge.com/search?q=OpenAI" },
+         { "type": "rss", "tier": 2, "name": "Google News OpenAI", "url_template": "https://news.google.com/rss/search?q=OpenAI+GPT&hl=en-US&gl=US&ceid=US:en" }
+       ]
+     },
+     {
+       "name": "Anthropic",
+       "keywords": ["Anthropic", "Claude", "Claude Opus", "Claude Sonnet"],
+       "sources": [
+         { "type": "rss", "tier": 1, "name": "Anthropic Blog RSS", "url": "https://www.anthropic.com/feed.xml" },
+         { "type": "aggregator", "tier": 2, "name": "The Verge Anthropic", "url_template": "https://www.theverge.com/search?q=Anthropic+Claude" },
+         { "type": "rss", "tier": 2, "name": "Google News Anthropic", "url_template": "https://news.google.com/rss/search?q=Anthropic+Claude&hl=en-US&gl=US&ceid=US:en" }
+       ]
+     },
+     {
+       "name": "Google DeepMind",
+       "keywords": ["Google DeepMind", "Gemini", "Gemma", "AlphaFold", "AlphaProteo", "Veo"],
+       "sources": [
+         { "type": "rss", "tier": 1, "name": "Google AI Blog RSS", "url": "https://blog.google/technology/ai/rss/" },
+         { "type": "rss", "tier": 1, "name": "DeepMind Blog RSS", "url": "https://deepmind.google/blog/feed.xml" },
+         { "type": "aggregator", "tier": 2, "name": "Ars Technica Google AI", "url_template": "https://arstechnica.com/search/?q=Google+AI" },
+         { "type": "rss", "tier": 2, "name": "GitHub google-deepmind releases", "url": "https://github.com/google-deepmind", "note": "Check for new repo releases" },
+         { "type": "rss", "tier": 2, "name": "Google News DeepMind", "url_template": "https://news.google.com/rss/search?q=Google+DeepMind+Gemini&hl=en-US&gl=US&ceid=US:en" }
+       ]
+     },
+     {
+       "name": "Meta",
+       "keywords": ["Meta AI", "Llama", "FAIR", "Meta research", "LLaMA"],
+       "sources": [
+         { "type": "rss", "tier": 1, "name": "Meta AI Blog RSS", "url": "https://ai.meta.com/blog/feed.xml" },
+         { "type": "aggregator", "tier": 2, "name": "The Verge Meta AI", "url_template": "https://www.theverge.com/search?q=Meta+Llama+AI" },
+         { "type": "rss", "tier": 2, "name": "Google News Meta AI", "url_template": "https://news.google.com/rss/search?q=Meta+Llama+AI&hl=en-US&gl=US&ceid=US:en" }
+       ]
+     },
+     {
+       "name": "Microsoft",
+       "keywords": ["Microsoft AI", "Phi", "Copilot", "Microsoft Research"],
+       "sources": [
+         { "type": "aggregator", "tier": 2, "name": "The Verge Microsoft AI", "url_template": "https://www.theverge.com/search?q=Microsoft+AI+Copilot" },
+         { "type": "rss", "tier": 2, "name": "Google News Microsoft AI", "url_template": "https://news.google.com/rss/search?q=Microsoft+AI+Copilot+Phi&hl=en-US&gl=US&ceid=US:en" }
+       ]
+     },
+     {
+       "name": "DeepSeek",
+       "keywords": ["DeepSeek", "DeepSeek-R1", "DeepSeek-V3", "DeepSeek-V4", "DeepSeek-Coder"],
+       "sources": [
+         { "type": "aggregator", "tier": 2, "name": "The Verge DeepSeek", "url_template": "https://www.theverge.com/search?q=DeepSeek+AI" },
+         { "type": "rss", "tier": 2, "name": "Google News DeepSeek", "url_template": "https://news.google.com/rss/search?q=DeepSeek+AI&hl=en-US&gl=US&ceid=US:en" },
+         { "type": "aggregator", "tier": 2, "name": "TechNode DeepSeek", "url_template": "https://technode.com/?s=DeepSeek" }
+       ]
+     },
+     {
+       "name": "Zhipu AI",
+       "keywords": ["Zhipu", "ChatGLM", "GLM", "CogView", "CodeGeeX", "智谱"],
+       "sources": [
+         { "type": "rss", "tier": 2, "name": "Google News Zhipu", "url_template": "https://news.google.com/rss/search?q=Zhipu+AI+ChatGLM&hl=en-US&gl=US&ceid=US:en" }
+       ]
+     },
+     {
+       "name": "Alibaba",
+       "keywords": ["Qwen", "Tongyi Qianwen", "Alibaba Cloud", "DAMO Academy", "通义千问"],
+       "sources": [
+         { "type": "rss", "tier": 2, "name": "Google News Qwen", "url_template": "https://news.google.com/rss/search?q=Qwen+Alibaba+AI&hl=en-US&gl=US&ceid=US:en" }
+       ]
+     }
+   ],
+   "aggregator_media": [
+     { "name": "The Verge", "search_url_template": "https://www.theverge.com/search?q={query}" },
+     { "name": "TechCrunch", "search_url_template": "https://techcrunch.com/?s={query}" },
+     { "name": "Ars Technica", "search_url_template": "https://arstechnica.com/search/?q={query}" },
+     { "name": "Reuters Technology", "search_url_template": "https://www.reuters.com/technology/artificial-intelligence/" },
+     { "name": "VentureBeat AI", "search_url_template": "https://venturebeat.com/category/ai/" }
+   ]
+ }
